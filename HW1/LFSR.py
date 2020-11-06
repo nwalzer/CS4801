@@ -7,8 +7,8 @@
 
 
 
-state=[0, 0, 1, 0, 1, 1, 0] #right most bit is output bit
-gates = [1, 1, 0, 0, 0, 0, 1] #right most bit corresponds to output bit, feedback gate is always closed!
+state=[0, 0, 1, 0, 1, 1, 0, 0, 0] #right most bit is output bit
+gates = [1, 1, 0, 0, 0, 0, 1, 0, 0] #right most bit corresponds to output bit, feedback gate is always closed!
 n = 30 #number of cycles to run
 
 #If gate polynomial is reducible there will be multiple isolated input states that yield varying periods and outputs, the sum of the periods will equal the max period, however
@@ -41,4 +41,7 @@ for x in range(n):
 print("PERIOD IS: " + str(len(dictionary.keys())))
 print("OUTPUT: " + finalOutput)
 
+#sortedByVal = sorted(dictionary.items(), key=lambda x: x[1], reverse=False)
+#for i in sortedByVal:
+#    print(i[0] + " : " + str(i[1]))
         
