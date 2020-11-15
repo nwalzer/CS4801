@@ -13,6 +13,7 @@ def discrete():
         endingVals.append(hex(val3 & 0xFF))
         endingVals.append(hex(val4 & 0xFF))
     printResult(endingVals)
+    return endingVals
         
 def printResult(endingVals):
     for i in range(4): #print results as the exact matrix it should be
@@ -30,4 +31,5 @@ def mult2(val):
         newVal = newVal ^ 0x1B
     return newVal
 
-discrete()
+if __name__ == '__main__':  
+    discrete()
